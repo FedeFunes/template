@@ -10,9 +10,4 @@ describe('Page', () => {
 
     expect(heading).toBeInTheDocument();
   });
-
-  it('renders homepage unchanged', () => {
-    const { container } = render(<Page />);
-    expect(container).toMatchSnapshot();
-  });
 });

@@ -121,15 +121,15 @@ We make a separation of concerns (SOC) in the component.
 
 ### Files and Purpose
 
-- **`.test.(js|ts|tsx)`**  
+- **`.test.(ts|tsx)`**  
   Contains unit tests for the component to ensure expected behavior.  
-  Example: `Button.test.tsx`.
+  Example: `Button.test.tsx`, `ButtonHelper.test.ts`.
 
-- **`.helper.(js|ts)`**  
+- **`.helper.ts`**  
   Helper functions specific to the component to simplify logic.  
-  Example: `calculateButtonStyles.helper.ts`.
+  Example: `Button.helper.ts`.
 
-- **`.types.(ts)`**  
+- **`.types.ts`**  
   Defines TypeScript types and interfaces for the component.  
   Example: `Button.types.ts`.
 
@@ -137,6 +137,6 @@ We make a separation of concerns (SOC) in the component.
   Scoped CSS styles for the component to prevent conflicts.  
   Example: `Button.module.css`.
 
-- **`use<ComponentName>.hook.(js|ts)`**  
+- **`use<ComponentName>.hook.ts`**  
   Custom hook encapsulating reusable stateful logic.  
   Example: `useButton.hook.ts`.

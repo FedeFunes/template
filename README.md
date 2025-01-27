@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Build Tools
 
-## Getting Started
+### Framework
 
-First, run the development server:
+**Next.js**: v15 with app-routing, Server Components suport and Stream support.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [`.next.config`](./next.config.ts)
+- [`next-env.d.ts`](./next-env.d.ts)
+- [`.next`](./.next)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Formatter
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Prettier**: Ensures consistent code formatting.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [`.prettierignore`](./.prettierignore)
+- [`.prettierrc`](./.prettierrc)
 
-## Learn More
+### Linter
 
-To learn more about Next.js, take a look at the following resources:
+**ESLint**: Uses Next.js' built-in implementation for linting.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [`eslint.config.mjs`](./eslint.config.mjs)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Git Hooks
 
-## Deploy on Vercel
+**Husky**: Manages Git hooks for the project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [`.husky`](./.husky)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Lint-Staged**: Lints staged files before committing.
+
+- [`lint-staged.config.ts`](./lint-staged.config.ts)
+
+### Styling
+
+**CSS Modules**: Scoped styles compatible with Next.js Server Components.
+
+### Internationalization
+
+**i18next**: Handles translations and localization.
+
+### Storybook
+
+Develop and document UI components in isolation.
+
+- [`.storybook`](./.storybook)
+- [`.stories`](./.stories)
+
+### Containerization
+
+**Docker**: Uses multi-stage builds for efficient container creation.
+
+- [`Dockerfile`](./Dockerfile)
+
+### Testing Setup
+
+- **Jest**: Runs unit tests for TypeScript and JavaScript.
+- **Testing Library for React**: Simplifies component testing.
+- **Snapshot Testing**: Captures UI snapshots for regression testing.
+
+#### Configs
+
+- [`jest.config.ts`](./jest.config.ts)
+- [`jest.setup.ts`](./jest.setup.ts)
+
+# Scripts
+
+### Development
+
+- **`dev`**: Starts the development server using Turbopack for fast builds and updates.
+
+### Production
+
+- **`build`**: Compiles the app for production with optimized assets.
+- **`start`**: Runs the production build locally for testing purposes.
+
+### Code Quality
+
+- **`lint`**: Executes ESLint to identify and fix issues.
+- **`format`**: Formats code using Prettier across the codebase.
+
+### Git Hooks
+
+- **`prepare`**: Sets up Husky for managing Git hooks during `npm install`.
+
+### Testing
+
+- **`test`**: Runs all unit tests using Jest.
+- **`test:watch`**: Watches for changes and reruns relevant tests.
+- **`test:coverage`**: Generates a code coverage report.
+
+### Storybook
+
+- **`storybook`**: Launches Storybook on port `6006` for UI development.
+- **`build-storybook`**: Builds the Storybook environment for deployment.
+
+# Project Structure
+
+### `lib`
+
+- Non-React code for utilities, modules, and reusable logic.
+  - **Utilities**: Helper functions and pure logic.
+  - **Modules**: Domain-specific or business logic.
+  - **Classes**: Encapsulated logic using object-oriented design.
+  - **Enums**: Constants for consistency.
+
+### `components`
+
+- Houses all React components.
+  - **`shared`**: Common, reusable components (e.g., buttons, inputs).
+  - **`<Feature>`**: Feature-specific components organized by functionality.
+
+### `hooks`
+
+- Contains all custom React hooks for reusable logic.
+  - Examples: `useFetch`, `useDebounce`, `useAuth`.
+
+# Component Anatomy
+
+We make a separation of concerns (SOC) in the component.
+
+### Files and Purpose
+
+- **`.test.(ts|tsx)`**  
+  Contains unit tests for the component to ensure expected behavior.  
+  Example: `Button.test.tsx`, `ButtonHelper.test.ts`.
+
+- **`.helper.ts`**  
+  Helper functions specific to the component to simplify logic.  
+  Example: `Button.helper.ts`.
+
+- **`.types.ts`**  
+  Defines TypeScript types and interfaces for the component.  
+  Example: `Button.types.ts`.
+
+- **`.module.css`**  
+  Scoped CSS styles for the component to prevent conflicts.  
+  Example: `Button.module.css`.
+
+- **`use<ComponentName>.hook.ts`**  
+  Custom hook encapsulating reusable stateful logic.  
+  Example: `useButton.hook.ts`.

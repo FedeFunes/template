@@ -1,0 +1,20 @@
+.summaryBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.summaryItem {
+  margin: 0 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.summaryItem span {
+  font-weight: bold;
+}

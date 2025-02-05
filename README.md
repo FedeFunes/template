@@ -46,6 +46,12 @@ Develop and document UI components in isolation.
 - [`.storybook`](./.storybook)
 - [`.stories`](./.stories)
 
+For more information on the development and design of components:
+
+- [Thinking in React](https://react.dev/learn/thinking-in-react)
+- [Component-Driven Development (CDD)](https://www.componentdriven.org)
+- [Atomic Design by Brad Frost](https://atomicdesign.bradfrost.com)
+
 ### Containerization
 
 **Docker**: Uses multi-stage builds for efficient container creation.
@@ -117,7 +123,7 @@ Develop and document UI components in isolation.
 
 # Component Anatomy
 
-We make a separation of concerns (SOC) in the component.
+We make a separation of concerns (SOC) in the component. This is just a guide to improve the SOC. nombrar la ventaja de c/u and why
 
 ### Files and Purpose
 
@@ -126,13 +132,13 @@ We make a separation of concerns (SOC) in the component.
   Example: `Button.test.tsx`, `ButtonHelper.test.ts`.
 
 - **`.helper.ts`**  
-  Helper functions specific to the component to simplify logic.  
+  Helper functions specific to the component to simplify logic. You dont to learn testing-hooks tools. it ccan be surge a class of domain fro exanmple.
+  Sometimes I used the format '.service.ts' or '<Component>Service', but I don't think it was liked very much because it is confusingly related to Angular and the Service pattern. Helper seems to be more familiar in this case. Another reason was the next: When I did testing, the test file was this: '<Component>.service.test.ts', the with .helper, now I prefer ButtonHelper.ts. The best practice is that ButtonHelper should only be used by the custom hook, but not by the UI, because it's not the responsibility of that layer, but if okay it's you that ;). It's more difficult to test a custom hook; you have to be more aware of asynchrony because of how state management works.
   Example: `Button.helper.ts`.
 
 - **`.types.ts`**  
-  Defines TypeScript types and interfaces for the component.  
+  Defines TypeScript types and interfaces for the component, custom hook, and helper.  
   Example: `Button.types.ts`.
-
 - **`.module.css`**  
   Scoped CSS styles for the component to prevent conflicts.  
   Example: `Button.module.css`.

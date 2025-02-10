@@ -133,7 +133,8 @@ We make a separation of concerns (SOC) in the component. This is just a guide to
 
 - **`.helper.ts`**  
   Helper functions specific to the component to simplify logic. You dont to learn testing-hooks tools. it ccan be surge a class of domain fro exanmple.
-  Sometimes I used the format '.service.ts' or '<Component>Service', but I don't think it was liked very much because it is confusingly related to Angular and the Service pattern. Helper seems to be more familiar in this case. Another reason was the next: When I did testing, the test file was this: '<Component>.service.test.ts', the with .helper, now I prefer ButtonHelper.ts. The best practice is that ButtonHelper should only be used by the custom hook, but not by the UI, because it's not the responsibility of that layer, but if okay it's you that ;). It's more difficult to test a custom hook; you have to be more aware of asynchrony because of how state management works.
+  Sometimes I used the format '.service.ts' or '<Component>Service', but I don't think it was liked very much because it is confusingly related to Angular and the Service pattern. Helper seems to be more familiar in this case. Another reason was the next: When I did testing, the test file was this: '<Component>.service.test.ts', the with .helper, now I prefer ButtonHelper.ts. The best practice is that ButtonHelper should only be used by the custom hook, but not by the UI, because it's not the responsibility of that layer, but if okay it's you that ;).
+  Also, it's more difficult to test logic business in a custom hook; you have to be more aware of asynchrony because of how React state management works.
   Example: `Button.helper.ts`.
 
 - **`.types.ts`**  

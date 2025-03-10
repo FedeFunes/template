@@ -19,7 +19,8 @@
     "@fravega-it/bumeran-ds-fvg": "^1.5.5",
     "next": "15.1.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "styled-components": "^6.1.15"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",

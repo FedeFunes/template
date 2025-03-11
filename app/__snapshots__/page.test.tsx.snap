@@ -1,125 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Page renders homepage unchanged 1`] = `
+exports[`Page matches snapshot 1`] = `
+<DocumentFragment>
+  .c1 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: Work Sans;
+  color: inherit;
+}
+
+.c0 {
+  color: #FFFFFF;
+  background-color: #871EE3;
+  border: none;
+  max-height: 48px;
+  padding: 12px 24px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  gap: 4px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.c0:hover {
+  background-color: #7620C7;
+}
+
+.c0:focus-visible {
+  background-color: #7620C7;
+  box-shadow: 0px 0px 0px 4px #B3D1FF;
+  outline: unset;
+}
+
+.c0:active {
+  background-color: #590F99;
+}
+
+.c0 label {
+  cursor: pointer;
+}
+
+.c0:disabled,
+.c0 [disabled] {
+  cursor: unset;
+  background-color: #EDEDFA;
+  color: #C3C3D9;
+  border: unset;
+}
+
+.c0:disabled label,
+.c0 [disabled] label {
+  cursor: unset;
+}
+
+.c0:disabled:hover,
+.c0 [disabled]:hover {
+  border: unset;
+}
+
+.c0:disabled svg,
+.c0 [disabled] svg {
+  fill: #C3C3D9;
+}
+
 <div>
-  <div
-    class="page"
-  >
-    <main
-      class="main"
+    <button
+      class="c0"
+      data-testid="bumeran-button"
+      type="button"
     >
-      <img
-        alt="Next.js logo"
-        class="logo"
-        data-nimg="1"
-        decoding="async"
-        height="38"
-        src="/next.svg"
-        style="color: transparent;"
-        width="180"
-      />
-      <ol>
-        <li>
-          Get started by editing 
-          <code>
-            app/page.tsx
-          </code>
-          .
-        </li>
-        <li>
-          Save and see your changes instantly.
-        </li>
-      </ol>
-      <div
-        class="ctas"
+      <label
+        aria-label="Hello World!"
       >
-        <a
-          class="primary"
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          rel="noopener noreferrer"
-          target="_blank"
+        <div
+          aria-level="5"
+          class="c1"
+          data-testid="bumeran-heading"
+          role="heading"
         >
-          <img
-            alt="Vercel logomark"
-            class="logo"
-            data-nimg="1"
-            decoding="async"
-            height="20"
-            loading="lazy"
-            src="/vercel.svg"
-            style="color: transparent;"
-            width="20"
-          />
-          Deploy now
-        </a>
-        <a
-          class="secondary"
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Read our docs
-        </a>
-      </div>
-    </main>
-    <footer
-      class="footer"
-    >
-      <a
-        href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <img
-          alt="File icon"
-          aria-hidden="true"
-          data-nimg="1"
-          decoding="async"
-          height="16"
-          loading="lazy"
-          src="/file.svg"
-          style="color: transparent;"
-          width="16"
-        />
-        Learn
-      </a>
-      <a
-        href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <img
-          alt="Window icon"
-          aria-hidden="true"
-          data-nimg="1"
-          decoding="async"
-          height="16"
-          loading="lazy"
-          src="/window.svg"
-          style="color: transparent;"
-          width="16"
-        />
-        Examples
-      </a>
-      <a
-        href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <img
-          alt="Globe icon"
-          aria-hidden="true"
-          data-nimg="1"
-          decoding="async"
-          height="16"
-          loading="lazy"
-          src="/globe.svg"
-          style="color: transparent;"
-          width="16"
-        />
-        Go to nextjs.org →
-      </a>
-    </footer>
+          Hello World!
+        </div>
+      </label>
+    </button>
   </div>
-</div>
+</DocumentFragment>
 `;

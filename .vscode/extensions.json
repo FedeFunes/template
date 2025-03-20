@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "christian-kohler.path-intellisense",
+    "aaron-bond.better-comments",
+    "eamodio.gitlens",
+    "wayou.vscode-todo-highlight",
+    "gruntfuggly.todo-tree",
+    "steoates.autoimport",
+    "naumovs.color-highlight",
+    "Luis.console-log",
+    "chamboug.js-auto-backticks",
+    "AykutSarac.jsoncrack-vscode",
+    "quicktype.quicktype"
+  ]
+}

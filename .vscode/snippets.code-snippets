@@ -1,0 +1,42 @@
+{
+  "Console Log": {
+    "prefix": "clg",
+    "body": ["console.log($1);"],
+    "description": "Console log",
+  },
+  "React Function Component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    <div>",
+      "      $2",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};",
+    ],
+    "description": "React Function Component",
+  },
+  "Try Catch": {
+    "prefix": "trycatch",
+    "body": [
+      "try {",
+      "  $1",
+      "} catch (error) {",
+      "  console.error('Error:', error);",
+      "}",
+    ],
+    "description": "Try catch block",
+  },
+  "React useState Hook": {
+    "prefix": "rus",
+    "body": [
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialValue});",
+    ],
+    "description": "React useState Hook con autocompletado",
+  },
+}

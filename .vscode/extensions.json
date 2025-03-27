@@ -2,7 +2,6 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "streetsidesoftware.code-spell-checker",
     "formulahendry.auto-rename-tag",
     "formulahendry.auto-close-tag",
     "christian-kohler.path-intellisense",
